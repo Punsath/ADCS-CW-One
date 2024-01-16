@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e200017e18.js" crossorigin="anonymous"></script>
+    <title>portfolio</title>
+  </head>
+
+  <body>
+
+    <nav>
+        <h1>PUNSATH</h1>
+        <ul class="navigationBar">
+          <li><a href="main.html" class="nav-link">Home</a></li>
+          <li><a href="#aboutMe" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="menu" id="menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+  </nav>
+
+    <section class="hero" id="about">
+        <img src="imagess/386427997_1493661544731893_2025465047521188897_n__1_-removebg-preview.png" class="heroImg"/>
+        <div class="bio">
+          <h1 class="bioTitle">Hi, I'm <span>Punsath</span> Vidunayana From Srilanka</h1>
+          <div class="bioText">
+            <div class="socialIcons">
+              <a href="https://www.facebook.com/punsath.vidunayana.1"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.instagram.com/_vidunayana_63/"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/punsath-vidunayana-perera-067618256/"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://twitter.com/PunsathV"><i class="fa-brands fa-square-x-twitter"></i></a>
+          </div>
+          </div>
+        </div>
+  </section>
+<br>
+    <section class="aboutMe" id="aboutMe">
+        <h2>About Me</h2><br>
+        <img src="imagess/386427997_1493661544731893_2025465047521188897_n.jpg"><br>
+        <p>
+            I'm punsath vidunayana, an undergraduate computer science engineer <br> at the Informatics 
+            Institute of Technology in Sri Lanka, affiliated with the University of Westminster 
+            in the UK. I'm also a passionate cricket player. Proficient in web development and 
+            programming languages like Java, Python, HTML, CSS, and JavaScript. I'm an ambitious
+            developer constantly learning new technologies to stay current with industry trends. 
+            My ultimate goal is to be a professional computer science engineer making a significant
+            impact in the it sector.
+        </p>
+      </section>
+
+      <div class="copyright">
+        <h4><i class="fa-solid fa-user"></i> Copyright © Punsath Vidunayana Perera</4>
+
+    </div>
+
+    <script>
+      //Select the burger icon, navigation list, and the navigation container
+        const burger = document.querySelector("#menu");
+        const ul = document.querySelector("nav ul");
+        const nav = document.querySelector("nav");
+
+        burger.addEventListener("click", () => { //Toggle the visibility of the navigation list when the burger icon is clicked
+          ul.classList.toggle("show"); // oggle the "show" class on the <ul> element
+        });
+
+        const navLink = document.querySelectorAll(".nav-link"); // Select all individual navigation links
+
+        navLink.forEach((link) => //For each navigation link, add an event listener for the click event
+        link.addEventListener("click", () => {
+            ul.classList.remove("show"); //Remove the "show" class from the <ul> element to hide the navigation list
+        })
+      );
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    
+
+  </body>
+</html>

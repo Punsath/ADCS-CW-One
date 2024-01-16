@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e200017e18.js" crossorigin="anonymous"></script>
+    <title>portfolio</title>
+  </head>
+
+  <body>
+    <nav>
+        <h1>PUNSATH</h1>
+        <ul class="navigationBar">
+          <li><a href="main.html" class="nav-link">Home</a></li>
+          <li><a href="main.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="menu" id="menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+    </nav>
+<br><br>
+    <section class="projects" id="projects">
+        <h1 class="projectsTitle">My Projects</h1>
+        <div class="projectsContainer">
+
+          <div class="projectContainer project-card">
+            <img src="imagess/work-1.jpg" class="projectPic"/> 
+            <h3 class="projectTitle">Open E-Library</h3>
+            <p class="projectDetails">
+              Built a website that allows users to find free e-books and also 
+              users can discover the free courses offered by universities
+              all over the world.        
+            </p>
+            <br>
+            <button type="button" class="button"><a href="imagess/Bit Lords_proposal.pdf" target="_blank" class="projectLink">Check it Out</a></button>
+          </div>
+
+          <div class="projectContainer project-card">
+            <img  src="imagess/work-2.jpg" class="projectPic"/>
+            <h3 class="projectTitle">Blog 1</h3>
+            <p class="projectDetails">
+              MFA enhances online security by adding layers of protection, guarding against breaches and phishing. Embrace MFA for safer digital experiences.
+            </p>
+            <time datetime="2023-11-12">Last Updated: November 14, 2023</time>
+            <button type="button" class="button"><a href="imagess/The Importance of Multi-Factor Authentication (MFA) in Securing Your Digital World.pdf" target="_blank" class="projectLink">Check it Out</a></button>
+          </div>
+
+          <div class="projectContainer project-card">
+            <img src="imagess/work-3.jpg" class="projectPic"/>
+            <h3 class="projectTitle">Blog 2</h3>
+            <p class="projectDetails">
+              IoT connects devices, transforming homes and industries. Challenges include security and privacy. The future is bright for IoT.
+            </p>
+            <time datetime="2023-11-12">Last Updated: November 14, 2023</time>
+            <button type="button" class="button"><a href="imagess/Unlocking the Power of the Internet of Things.pdf" target="_blank" class="projectLink">Check it Out</a></button>
+          </div>
+        </div>
+        
+      </section>
+      <br>
+
+      <div class="copyright">
+        <h4><i class="fa-solid fa-user"></i> Copyright © Punsath Vidunayana Perera</4>
+          
+      </div>
+
+      <script>
+        //Select the burger icon, navigation list, and the navigation container
+          const burger = document.querySelector("#menu");
+          const ul = document.querySelector("nav ul");
+          const nav = document.querySelector("nav");
+  
+          burger.addEventListener("click", () => { //Toggle the visibility of the navigation list when the burger icon is clicked
+            ul.classList.toggle("show"); // oggle the "show" class on the <ul> element
+          });
+  
+          const navLink = document.querySelectorAll(".nav-link"); // Select all individual navigation links
+  
+          navLink.forEach((link) => //For each navigation link, add an event listener for the click event
+          link.addEventListener("click", () => {
+              ul.classList.remove("show"); //Remove the "show" class from the <ul> element to hide the navigation list
+          })
+        );
+      </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    
+
+  </body>
+</html>

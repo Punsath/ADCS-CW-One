@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:not(.exclude) {
+  color: #00d9ff; /*Negation pseudo class*/
+}
+a:hover {
+  color: rgb(0, 255, 47); /*User action pseudo class*/
+}
+body {
+  font-family: "Roboto", sans-serf; /*google fonts*/
+  
+}
+
+/*--------------------------------Header-----------------------------------*/
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background: linear-gradient(to right, #100f0d, #090808); /*Gradient Background*/
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /*shadows*/
+}
+nav h1 {
+  color: rgba(0, 217, 255, 0.936);  /*semi-transparent color*/
+  background: #100f0d;
+  animation-name: logo; 
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+ 
+}
+@keyframes logo{   /*Animations*/
+  from {color: rgba(0, 217, 255, 0.936);}
+  to {color: rgb(0, 149, 255);}
+}
+nav h1::before { /*Pseudo elements with generated content*/
+  content: "\2022"; /* Unicode character for a bullet point */
+  margin-right: 0.5rem;
+  font-size: 1.5rem; 
+  color: #00d9ff;
+  animation-name: logo; 
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+} 
+nav a {
+    transition: 0.3s; /*Transitions*/
+    background-color: #090808;
+}
+nav a:hover {
+    color:   rgba(0, 217, 255, 0.936);
+    border-bottom: 2px solid rgba(0, 217, 255, 0.936);
+}
+nav ul {
+    display: flex;
+    gap: 1.9rem;
+    background-color: #090808;
+} 
+nav ul>li { /*Child combinator*/ /*Structural selector*/
+    font-weight: 700;  /*Relational selector*/
+}
+.menu {
+    color: #00d9ff;
+    font-size: 2rem;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+}
+.bars{
+  background-color: #090808;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 68.75rem;
+    margin: auto;
+    color: white;
+}
+.hero img {
+    height: 37.5rem;
+    width: 37.5rem;
+}
+.bio {
+    width: 25rem;
+    padding: 0.625rem;
+    border-radius: 6px;  /*Rounded corners*/
+}
+.bio h1 {
+    margin-bottom: 0.5rem;
+    font-size: 45px;  /*Setting font size for bio headings(Text effects)*/
+}
+.bio h1 span{
+  color: #00d9ff;
+}
+.socialIcons a {
+  margin-right: 15px;
+  font-size: 40px;
+}
+.bio p {
+    line-height: 1.7rem;
+    padding: 0.3rem 0;
+}
+ul:nth-child(even) { /*nth pseudo class*/
+  background-color: #090808;
+}
+
+/*------------------------------About Me---------------------------------------*/
+
+.aboutMe {
+    padding: 1rem 6rem;
+    color: white;
+}
+.aboutMe h2 {
+    text-align: center;
+    background-color: #262626;
+    font-size: 35px;
+}
+.aboutMe p {
+    line-height: 1.7rem;
+    padding: 0.4rem;
+    font-size: 23px;
+}.aboutMe {
+    background-color: black;
+    padding: 1rem 6rem;
+}
+.aboutMe h2 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.aboutMe p {
+    line-height: 1.7rem;
+    padding: 0.4rem;
+    text-align: center;
+}
+.aboutMe img{
+    width: 200px;
+    height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    
+}
+
+/*-----------------------------------projects-------------------------------------*/
+
+.projects {
+    background-color: black;
+    padding: 32px 0;
+    margin-top: -2rem;
+    color: white;
+}
+.projectPic {
+    width: 65%;
+    height: 60%;
+}
+.button{
+    background-color: #00d9ff; 
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.projectLink{
+    background-color: #00d9ff;
+    font-weight: bold;
+    color: black !important;
+}
+.projects h1{
+    font-size: 35px;
+}
+.projectsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projectsTitle {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.projectContainer {
+    text-align: center;
+    width: 21.875rem;
+    padding: 1rem;
+}  
+/*----------------------*/
+.projectContainer p {
+    padding: 0.4rem;
+}
+.projectTitle {
+    margin-bottom: 0.5rem;
+    color: white;
+}
+.projectDetails {
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 16px;
+}
+.project-card {
+    border-radius: 11px; /*Rounded corners*/
+    box-shadow: 0 3px 10px #8b8eaf; /*shadows*/
+    padding: 20px;
+    margin: 10px;
+}
+time{
+  background-color: black !important;
+}
+
+/*-------------------------------------Contact---------------------------------------*/
+
+.contact {
+    margin-top: 1rem;
+    color: white;
+}
+.contact h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 30px;
+}
+.contactForm-container {
+    max-width: 40.75rem;
+    margin: 0 auto;
+    padding: 0.938rem;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px #00d9ff; /*shadows*/
+}
+.contactForm-container label {
+    line-height: 2.7em;
+    font-weight: bold;
+    color: white
+}
+.contactForm-container textarea {
+    min-height: 6.25rem;
+    font-size: 14px;
+}
+.contactForm-container .inputField {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    border: 2px outset #00d9ff;
+    font-size: 0.875rem;
+    outline: none;
+}
+.inputField::placeholder {
+    padding: 0.5rem;
+    color: #00d9ff;
+}
+.submitBtn {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #00d9ff;
+    border: 2px solid ;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.submitBtn:hover {
+    border: 2px solid blue;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: #262626;
+    color: white;
+    margin-top: 20px;
+}
+time{
+  background-color: #262626;
+  font-weight: 100;
+  font-size: 15px;
+}
+.copyright h4{
+    background-color: #262626;
+}
+.copyright i{
+  color: #00d9ff; 
+  background-color: #262626; 
+}
+.contactForm-container label, /*Relational selector*/
+.contactForm-container input, /*Relational selector*/
+.contactForm-container textarea{ /*Relational selector*/
+    color: white;
+    padding: 5px;
+}
+input[type="text"]::placeholder, /*Attribute selectors*/
+input[type="email"]::placeholder{ /*Attribute selectors*/
+    color: #808080;    
+}
+textarea[placeholder="Enter Your Message"]::placeholder {
+  color: #808080;
+}
+.contactForm-container input:valid, /*Validity pseudo class*/
+.contactForm-container textarea:valid { /*Validity pseudo class*/
+    border: 2px solid green;
+}
+
+ /*--------------------------Responsive---------------------------------------*/
+
+ @media screen and (max-width: 720px) {
+
+    nav {
+        padding: 1.5rem 1rem;
+    }
+    nav ul {
+        position: fixed;
+        background-color: black;
+        flex-direction: column;
+        top: 86px;
+        left: 10%;
+        width: 80%;
+        text-align: center;
+        transform: translateX(120%); /*transform*/
+        transition: transform 0.5s ease-in;  /*Transitions-control speed*/
+    }
+      nav ul li {
+      margin: 8px;
+    }
+    .menu {
+      display: block;
+      
+    }
+    nav ul.show {
+      transform: translateX(0); /*transform*/
+    }
+
+    /*----------Header Responcive-----------------*/
+
+    .hero {
+      margin-top: -4rem;
+      flex-direction: column;
+      gap: 0;
+    }
+    .hero img {
+      height: 37.5rem;
+      width: 30rem;
+    }
+    .bio {
+      margin-top: -7rem;
+      width: 20.5rem;
+    }
+
+    /*-----------About Me Responsive---------------*/
+
+    .aboutMe {
+      margin-top: 2rem;
+      padding: 1rem 3.5rem;
+    }
+    .aboutMe h2 {
+      text-align: center;
+    }
+    /*----------------Projects Responsive----------------*/
+    
+    .projectsContainer {
+      flex-direction: column;
+    }
+    .projectContainer {
+      width: 20.875rem;
+    }
+
+    /*----------------Contact Responsive------------*/
+
+    .contactForm-container {
+      max-width: 23.75rem;
+    }
+}
+
+/*-------------Small Phones Responsive----------------*/
+
+@media screen and (max-width: 420px) {
+    .hero img {
+      height: 37.5rem;
+      width: 23rem;
+    }
+    .bio {
+      width: 18.3rem;
+    }
+    .projectContainer {
+      width: 17.875rem;
+    }
+    .contactForm-container {
+      max-width: 17.75rem;
+    }
+} 

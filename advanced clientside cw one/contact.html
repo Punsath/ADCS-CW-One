@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e200017e18.js" crossorigin="anonymous"></script>
+    <title>portfolio</title>
+  </head>
+
+  <body>
+    
+    <nav>
+        <h1>PUNSATH</h1>
+        <ul class="navigationBar">
+          <li><a href="main.html" class="nav-link">Home</a></li>
+          <li><a href="main.html" class="nav-link">About</a></li>
+          <li><a href="projects.html" class="nav-link">Projects</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="menu" id="menu">
+          <ion-icon class="bars" name="menu-outline"></ion-icon>
+        </button>
+  </nav>
+  <form method="POST" action="https://formspree.io/f/xzblqbpz" class="form">
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2><br>
+        <div class="contactForm-container">
+          <div class="contactForm">
+            <form method="POST" class="form">
+              <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="Name" placeholder="Enter Your Name" class="inputField" required/>
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" placeholder="Enter Your Email" class="inputField" required/>
+              </div>
+              <div>
+                <label for="message">Message</label>
+                <textarea id="message" cols="60" rows="10"  placeholder="Enter Your Message"  name="Message" class="inputField" required></textarea>
+              </div>
+              <input type="submit" value="Submit"  id="submitBtn" class="submitBtn"/>
+            </form>
+          </div>
+        </div>
+      </section>
+    </form>
+        <br><br>
+      <div class="copyright">
+        <h4><i class="fa-solid fa-user"></i>Copyright © Punsath Vidunayana Perera</4><br>
+          
+    </div>
+    
+    <script>
+      //Select the burger icon, navigation list, and the navigation container
+        const burger = document.querySelector("#menu");
+        const ul = document.querySelector("nav ul");
+        const nav = document.querySelector("nav");
+
+        burger.addEventListener("click", () => { //Toggle the visibility of the navigation list when the burger icon is clicked
+          ul.classList.toggle("show"); // oggle the "show" class on the <ul> element
+        });
+
+        const navLink = document.querySelectorAll(".nav-link"); // Select all individual navigation links
+
+        navLink.forEach((link) => //For each navigation link, add an event listener for the click event
+        link.addEventListener("click", () => {
+            ul.classList.remove("show"); //Remove the "show" class from the <ul> element to hide the navigation list
+        })
+      );
+    </script>
+
+    <script type="module"src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+  </body>
+</html>
